@@ -1,0 +1,56 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+footer
+*************************************************/
+footer {
+  position: sticky;
+  top: 100%;
+  background-color: #fff;
+  padding-bottom: 2rem;
+  p {
+    &:has(small) {
+      text-align: center;
+    }
+  }
+  .footer-inner {
+    @include c.flex(between, top);
+    padding: 8rem v.pxtovw(40) 2rem 4rem;
+    @include c.mq() {
+      width: 90%;
+      margin: 0 auto;
+      padding: 4rem 0;
+    }
+    .footerNav-wrap {
+      width: 75%;
+      @include c.flex(between, top);
+      margin-bottom: 4rem;
+      @include c.mq() {
+        flex-direction: column;
+      }
+      .fnav_list {
+        margin-bottom: 2rem;
+        &:not(:has(nav)) {
+          a {
+            font-weight: 600;
+          }
+        }
+        p {
+          font-weight: 600;
+          margin-bottom: 0.3rem;
+        }
+        li {
+          a {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+    .logo {
+      width: 22rem;
+      height: 100%;
+      aspect-ratio: 1/0.17;
+      background-color: #333;
+    }
+  }
+}

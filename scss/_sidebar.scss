@@ -1,0 +1,93 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+sidebar
+*************************************************/
+aside {
+  width: 15%;
+  max-width: 300px;
+  flex-shrink: 0;
+  box-shadow: v.$shadow01;
+  padding: 2rem;
+  background-color: #fff;
+  z-index: 0;
+  @include c.mq() {
+    display: none;
+  }
+  .sidebar-wrapper {
+    position: sticky;
+    top: 10rem;
+  }
+  .snav_list {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    &:not(:has(nav)) {
+      a {
+        font-weight: 600;
+      }
+    }
+    p {
+      position: relative;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      &::before {
+        content: "";
+        width: 10px;
+        aspect-ratio: 1/1;
+        background-color: #333;
+        position: absolute;
+        @include c.center(false, true);
+        left: -2rem;
+      }
+    }
+    li {
+      a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .side-btnArea {
+    margin-top: 4rem;
+  }
+  .btn-wrap {
+    margin-bottom: 1.2rem;
+  }
+  &.snav_maker-buyer {
+    width: 25%;
+    max-width: 32rem;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: v.pxtovw(71);
+    background-color: transparent;
+    box-shadow: none;
+    > div {
+      background-color: #fff;
+      padding: 0 1.5rem 2rem;
+      border-radius: 5px;
+      box-shadow: v.$shadow01;
+      &:not(:has(.btn-wrap)) {
+        padding-bottom: 0;
+      }
+    }
+    nav {
+      ul {
+        li {
+          padding: 2.5rem 0;
+          border-bottom: 1px solid #aaa;
+          &:last-of-type {
+            border-bottom: none;
+          }
+          a {
+            @include c.flex(start, center);
+            gap: 1rem;
+            line-height: 1;
+            font-weight: 600;
+          }
+          img {
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+}

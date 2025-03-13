@@ -1,0 +1,256 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+header
+*************************************************/
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #888;
+  background-color: rgba($color: #000, $alpha: 0.9);
+  z-index: 999;
+  .header-inner {
+    @include c.flex(between, center);
+    padding: 1.2rem v.pxtovw(40) 1rem v.pxtovw(15);
+    @include c.mq() {
+      padding: 2rem v.pxtovw_sp(20) 1.5rem v.pxtovw_sp(10);
+    }
+    .logo {
+      width: 20rem;
+      aspect-ratio: 1/0.25;
+      background-color: #333;
+      @include c.mq() {
+        width: 12rem;
+      }
+    }
+    .serch {
+      width: 60rem;
+      @include c.mq() {
+        display: none;
+      }
+    }
+    .header-acount {
+      @include c.mq() {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .acount-wrapper {
+        @include c.flex(between, center);
+        gap: 4rem;
+        .mylist {
+          position: relative;
+          @include c.mq() {
+            display: none;
+          }
+          a {
+            font-size: 1.4rem;
+            color: #fff;
+          }
+          &::after {
+            content: "";
+            width: 1px;
+            height: 150%;
+            background-color: #fff;
+            position: absolute;
+            @include c.center(false, true);
+            right: -1.8rem;
+          }
+          img {
+            width: 18px;
+            height: 18px;
+            background-color: #333;
+            margin-right: 1rem;
+          }
+        }
+        .user {
+          @include c.flex(between, center);
+          gap: 2rem;
+          @include c.mq() {
+            gap: 0.5rem;
+          }
+          .u-name {
+            font-size: 1.4rem;
+            color: #fff;
+            @include c.mq() {
+              font-size: 1.2rem;
+            }
+          }
+          a {
+            img {
+              width: 20px;
+              height: 25px;
+              background-color: #333;
+              @include c.mq() {
+                width: 18px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//ハンバーガーボタン
+.hamberger-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ham-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+  }
+  &.under-hum {
+    .hambager {
+      .c-line {
+        background-color: #000;
+      }
+    }
+    p {
+      color: #000;
+    }
+  }
+  &.is-ham-open {
+    .hambager {
+      .c-line {
+        // background-color: #000;
+        &:first-of-type {
+          animation: line1-open var(--navTransition) forwards;
+        }
+        &:nth-of-type(2) {
+          animation: line2-open var(--navTransition) forwards;
+        }
+        &:last-of-type {
+          animation: line3-open var(--navTransition) forwards;
+        }
+      }
+    }
+  }
+}
+.hambager-content {
+  position: relative;
+  width: 2.9rem;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2px;
+}
+:root {
+  --navTransition: 0.4s;
+}
+.hambager {
+  width: 2.9rem;
+  height: 1.6rem;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  .c-line {
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    @include c.mq() {
+      width: 100%;
+    }
+    &:first-of-type {
+      top: 0;
+      animation: line1 var(--navTransition) forwards;
+    }
+    &:nth-of-type(2) {
+      top: 50%;
+      animation: line2 var(--navTransition) forwards;
+    }
+    &:last-of-type {
+      top: 100%;
+      animation: line3 var(--navTransition) forwards;
+    }
+  }
+}
+
+@keyframes line1 {
+  0% {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(0);
+    top: 0;
+  }
+}
+@keyframes line1-open {
+  0% {
+    transform: rotate(0);
+    top: 0;
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+}
+@keyframes line2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes line2-open {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes line3 {
+  0% {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(0);
+    top: 100%;
+  }
+}
+@keyframes line3-open {
+  0% {
+    transform: rotate(0);
+    top: 100%;
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+}
