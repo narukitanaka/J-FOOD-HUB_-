@@ -83,6 +83,42 @@ $('.drawer-menu a[href^="#"]').on("click", function () {
 });
 
 ///////////////////////////////////////////
+//archive-flter アコーディオン
+///////////////////////////////////////////
+$(document).ready(function () {
+  function setAccordionState() {
+    if ($(window).width() <= 768) {
+      // スマホ表示の場合
+      $(".sp_accordion-hide").hide(); // 初期状態で非表示
+    } else {
+      // PC表示の場合
+      $(".sp_accordion-hide").show(); // 常に表示
+    }
+  }
+  // 初期実行
+  setAccordionState();
+  $(window).resize(function () {
+    setAccordionState();
+  });
+  // アコーディオントリガーのクリックイベント（スマホ時のみ動作）
+  $(".sp_accordion-trigger").on("click", function () {
+    if ($(window).width() <= 768) {
+      $(this).next(".sp_accordion-hide").slideToggle("fast");
+      if ($(this).hasClass("open")) {
+        $(this).removeClass("open");
+      } else {
+        $(this).addClass("open");
+      }
+    }
+  });
+  // Clearボタンのクリックイベント
+  $("#clear-filters").on("click", function (e) {
+    e.stopPropagation(); // アコーディオンのトグルを防止
+    $("input[type='checkbox']").prop("checked", false);
+  });
+});
+
+///////////////////////////////////////////
 //サイドバー アコーディオン
 ///////////////////////////////////////////
 $(".sidebar-accordion nav").hide(); // 初期状態で非表示

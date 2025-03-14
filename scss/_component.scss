@@ -19,7 +19,7 @@ component
 // 検索バー
 .search-form {
   background-color: #fff;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 100vmax;
   .search-input-wrapper {
     @include c.flex($justify: between, $align: center);
@@ -60,13 +60,14 @@ component
     flex-wrap: wrap;
     gap: 5px;
     margin-bottom: 5px;
-    @include c.mq() {
-      margin-bottom: 1rem;
-    }
     span {
       font-size: 1.1rem;
       border-radius: 100vmax;
       padding: 3px 5px 2px;
+      @include c.mq() {
+        line-height: 1;
+        padding: 3px 5px 4px;
+      }
     }
     .parent {
       color: #fff;
@@ -83,7 +84,6 @@ component
     margin-bottom: 7px;
     @include c.mq() {
       font-size: 1.5rem;
-      margin-bottom: 1rem;
     }
   }
   .maker {
@@ -123,6 +123,10 @@ component
   padding-left: 2rem;
   margin-bottom: 3rem;
   transition: all 0.3s;
+  @include c.mq() {
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
   &:has(.info a:hover) {
     background-color: #fff;
     > div {
@@ -137,10 +141,19 @@ component
     padding: 3rem 2rem 3rem 0;
     border-bottom: 1.5px solid #aaa;
     transition: all 0.3s;
+    @include c.mq() {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 2rem 0 3rem 0;
+    }
     .left {
       width: 50%;
       flex-shrink: 0;
       padding-right: 3rem;
+      @include c.mq() {
+        width: 100%;
+        padding-right: 0;
+      }
       .img-box {
         aspect-ratio: 1/0.65;
         border-radius: 5px;
@@ -152,6 +165,9 @@ component
       min-width: 0;
       .info {
         margin-bottom: 4rem;
+        @include c.mq() {
+          margin-bottom: 2rem;
+        }
         .cate {
           display: flex;
           flex-wrap: wrap;
@@ -162,6 +178,10 @@ component
             font-size: 1.1rem;
             border-radius: 100vmax;
             padding: 3px 5px 2px;
+            @include c.mq() {
+              line-height: 1;
+              padding: 3px 5px 4px;
+            }
           }
           .parent {
             color: #fff;
@@ -180,9 +200,15 @@ component
           font-weight: 700;
           line-height: 1;
           margin-bottom: 1rem;
+          @include c.mq() {
+            font-size: 2rem;
+          }
           .logo {
             display: block;
             width: 3.5rem;
+            @include c.mq() {
+              width: 2.5rem;
+            }
           }
         }
         .txt {
@@ -207,6 +233,9 @@ component
       }
       .links {
         max-width: 25rem;
+        @include c.mq() {
+          max-width: 100%;
+        }
         .btn-wrap {
           margin-bottom: 0.7rem;
           &:last-of-type {
@@ -227,6 +256,9 @@ component
   margin-bottom: 3rem;
   background-color: #fff;
   border-radius: 5px;
+  @include c.mq() {
+    padding: 3rem 2rem;
+  }
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -235,6 +267,9 @@ component
     top: 3rem;
     right: 3rem;
     width: 12.5rem;
+    @include c.mq() {
+      top: 4rem;
+    }
     .btn {
       aspect-ratio: 1/0.25;
     }
@@ -242,14 +277,25 @@ component
   a {
     > div {
       display: flex;
+      @include c.mq() {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
       .left {
         width: 32%;
         flex-shrink: 0;
         padding-right: 4rem;
+        @include c.mq() {
+          width: 100%;
+          padding-right: 0;
+        }
         .img-box {
           aspect-ratio: 1/0.65;
           border-radius: 5px;
           overflow: hidden;
+          @include c.mq() {
+            aspect-ratio: 1/0.55;
+          }
         }
       }
       .right {
@@ -260,10 +306,22 @@ component
           flex-wrap: wrap;
           gap: 8px;
           margin-bottom: 2rem;
-          span {
-            font-size: 1.2rem;
-            border-radius: 100vmax;
-            padding: 3px 5px 2px;
+          @include c.mq() {
+            margin-bottom: 1.5rem;
+          }
+          div {
+            max-width: 42rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            @include c.mq() {
+              row-gap: 5px;
+            }
+            span {
+              font-size: 1.2rem;
+              border-radius: 100vmax;
+              padding: 3px 5px 2px;
+            }
           }
           .parent {
             color: #fff;
@@ -282,6 +340,11 @@ component
           font-weight: 600;
           line-height: 1;
           margin-bottom: 1.5rem;
+          @include c.mq() {
+            font-size: 2rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+          }
           .logo {
             display: block;
             width: 3.5rem;
@@ -292,6 +355,14 @@ component
           overflow-wrap: break-word;
           line-height: 1.5;
           margin-bottom: 2rem;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          @include c.mq() {
+            margin-bottom: 1rem;
+          }
         }
         .region {
           @include c.flex(start, center);
@@ -316,8 +387,14 @@ component
   nav {
     ul {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       gap: 3.5rem;
+      row-gap: 1rem;
+      @include c.mq() {
+        gap: 2.5rem;
+        row-gap: 0.7rem;
+      }
       li,
       a {
         font-size: 1.2rem;
@@ -335,6 +412,17 @@ component
             top: 50%;
             transform: translateY(-50%);
             right: -2rem;
+            @include c.mq() {
+              right: -1.5rem;
+            }
+          }
+        }
+        &:not(:has(a)) {
+          @include c.mq() {
+            max-width: 8rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
       }

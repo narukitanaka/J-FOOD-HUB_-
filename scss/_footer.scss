@@ -8,6 +8,9 @@ footer {
   top: 100%;
   background-color: #fff;
   padding-bottom: 2rem;
+  @include c.mq() {
+    padding-bottom: 1rem;
+  }
   p {
     &:has(small) {
       text-align: center;
@@ -15,18 +18,21 @@ footer {
   }
   .footer-inner {
     @include c.flex(between, top);
-    padding: 8rem v.pxtovw(40) 2rem 4rem;
+    padding: 8rem v.pxtovw(60) 2rem v.pxtovw(300);
     @include c.mq() {
+      flex-direction: column;
       width: 90%;
       margin: 0 auto;
       padding: 4rem 0;
     }
     .footerNav-wrap {
-      width: 75%;
+      width: 70%;
       @include c.flex(between, top);
       margin-bottom: 4rem;
       @include c.mq() {
-        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 0;
       }
       .fnav_list {
         margin-bottom: 2rem;
@@ -36,21 +42,28 @@ footer {
           }
         }
         p {
+          font-size: 1.3rem;
           font-weight: 600;
           margin-bottom: 0.3rem;
+          @include c.mq() {
+            font-size: 1.2rem;
+          }
         }
         li {
           a {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            @include c.mq() {
+              font-size: 1.2rem;
+            }
           }
         }
       }
     }
     .logo {
       width: 22rem;
-      height: 100%;
-      aspect-ratio: 1/0.17;
-      background-color: #333;
+      @include c.mq() {
+        margin-bottom: 3rem;
+      }
     }
   }
 }

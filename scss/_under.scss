@@ -3,8 +3,9 @@
 /*************************************************
 conatct
 *************************************************/
-// 商品詳細
-#pageContact {
+// お問い合わせ,マイページ
+#pageContact,
+#pageMypage {
   h2 {
     font-size: 2.4rem;
     font-weight: 800;
@@ -15,49 +16,66 @@ conatct
   }
   .contact_wrap {
     margin-bottom: 8rem;
-    table {
-      table-layout: fixed;
-      width: 100%;
-      margin-bottom: 2rem;
-      tr {
-        &:last-of-type {
-          th {
-            vertical-align: baseline;
-          }
-        }
-        th,
-        td {
-          padding: 2rem 0;
-        }
+  }
+}
+
+// お問い合わせ
+#pageContact {
+  table {
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 2rem;
+    tr {
+      &:last-of-type {
         th {
-          width: 20%;
-          vertical-align: middle;
+          vertical-align: baseline;
         }
-        td {
-          input,
-          textarea {
-            width: 100%;
-            background-color: #fff;
-            border: 1px solid #aaa;
-            border-radius: 5px;
-            padding: 1rem 1.5rem;
-          }
-          textarea {
-            aspect-ratio: 1/0.3;
+      }
+      th,
+      td {
+        padding: 2rem 0;
+        @include c.mq() {
+          display: block;
+          padding: 0.5rem 0;
+        }
+      }
+      th {
+        width: 20%;
+        vertical-align: middle;
+        @include c.mq() {
+          width: 100%;
+        }
+      }
+      td {
+        @include c.mq() {
+          padding-bottom: 1.5rem;
+        }
+        input,
+        textarea {
+          width: 100%;
+          background-color: #fff;
+          border: 1px solid #aaa;
+          border-radius: 5px;
+          padding: 1rem 1.5rem;
+        }
+        textarea {
+          aspect-ratio: 1/0.3;
+          @include c.mq() {
+            aspect-ratio: 1/0.5;
           }
         }
       }
     }
-    .btn_wrap {
-      width: 18rem;
-      text-align: center;
-      margin: 0 auto 2rem;
-      .btn {
-        border-radius: 100vmax;
-      }
+  }
+  .btn_wrap {
+    width: 18rem;
+    text-align: center;
+    margin: 0 auto 2rem;
+    .btn {
+      border-radius: 100vmax;
     }
-    .policy {
-      text-align: center;
-    }
+  }
+  .policy {
+    text-align: center;
   }
 }

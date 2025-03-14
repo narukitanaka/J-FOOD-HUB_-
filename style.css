@@ -49,7 +49,7 @@ input[type=button]:focus {
 }
 
 .inner {
-  width: 90%;
+  width: 92%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -905,7 +905,7 @@ component
 
 .search-form {
   background-color: #fff;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 100vmax;
 }
 .search-form .search-input-wrapper {
@@ -946,15 +946,16 @@ component
   gap: 5px;
   margin-bottom: 5px;
 }
-@media screen and (max-width: 768px) {
-  .itemCard .cate {
-    margin-bottom: 1rem;
-  }
-}
 .itemCard .cate span {
   font-size: 1.1rem;
   border-radius: 100vmax;
   padding: 3px 5px 2px;
+}
+@media screen and (max-width: 768px) {
+  .itemCard .cate span {
+    line-height: 1;
+    padding: 3px 5px 4px;
+  }
 }
 .itemCard .cate .parent {
   color: #fff;
@@ -972,7 +973,6 @@ component
 @media screen and (max-width: 768px) {
   .itemCard .name {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
   }
 }
 .itemCard .maker {
@@ -1015,6 +1015,12 @@ component
   margin-bottom: 3rem;
   transition: all 0.3s;
 }
+@media screen and (max-width: 768px) {
+  .companyCard01 {
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+}
 .companyCard01:has(.info a:hover) {
   background-color: #fff;
 }
@@ -1030,10 +1036,23 @@ component
   border-bottom: 1.5px solid #aaa;
   transition: all 0.3s;
 }
+@media screen and (max-width: 768px) {
+  .companyCard01 > div {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0 3rem 0;
+  }
+}
 .companyCard01 > div .left {
   width: 50%;
   flex-shrink: 0;
   padding-right: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .companyCard01 > div .left {
+    width: 100%;
+    padding-right: 0;
+  }
 }
 .companyCard01 > div .left .img-box {
   aspect-ratio: 1/0.65;
@@ -1047,6 +1066,11 @@ component
 .companyCard01 > div .right .info {
   margin-bottom: 4rem;
 }
+@media screen and (max-width: 768px) {
+  .companyCard01 > div .right .info {
+    margin-bottom: 2rem;
+  }
+}
 .companyCard01 > div .right .info .cate {
   display: flex;
   flex-wrap: wrap;
@@ -1058,6 +1082,12 @@ component
   font-size: 1.1rem;
   border-radius: 100vmax;
   padding: 3px 5px 2px;
+}
+@media screen and (max-width: 768px) {
+  .companyCard01 > div .right .info .cate span {
+    line-height: 1;
+    padding: 3px 5px 4px;
+  }
 }
 .companyCard01 > div .right .info .cate .parent {
   color: #fff;
@@ -1076,9 +1106,19 @@ component
   line-height: 1;
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .companyCard01 > div .right .info .name {
+    font-size: 2rem;
+  }
+}
 .companyCard01 > div .right .info .name .logo {
   display: block;
   width: 3.5rem;
+}
+@media screen and (max-width: 768px) {
+  .companyCard01 > div .right .info .name .logo {
+    width: 2.5rem;
+  }
 }
 .companyCard01 > div .right .info .txt {
   width: 100%;
@@ -1104,6 +1144,11 @@ component
 .companyCard01 > div .right .links {
   max-width: 25rem;
 }
+@media screen and (max-width: 768px) {
+  .companyCard01 > div .right .links {
+    max-width: 100%;
+  }
+}
 .companyCard01 > div .right .links .btn-wrap {
   margin-bottom: 0.7rem;
 }
@@ -1121,6 +1166,11 @@ component
   background-color: #fff;
   border-radius: 5px;
 }
+@media screen and (max-width: 768px) {
+  .companyCard02 {
+    padding: 3rem 2rem;
+  }
+}
 .companyCard02:last-of-type {
   margin-bottom: 0;
 }
@@ -1130,21 +1180,43 @@ component
   right: 3rem;
   width: 12.5rem;
 }
+@media screen and (max-width: 768px) {
+  .companyCard02 .btn-wrap {
+    top: 4rem;
+  }
+}
 .companyCard02 .btn-wrap .btn {
   aspect-ratio: 1/0.25;
 }
 .companyCard02 a > div {
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .companyCard02 a > div {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
 .companyCard02 a > div .left {
   width: 32%;
   flex-shrink: 0;
   padding-right: 4rem;
 }
+@media screen and (max-width: 768px) {
+  .companyCard02 a > div .left {
+    width: 100%;
+    padding-right: 0;
+  }
+}
 .companyCard02 a > div .left .img-box {
   aspect-ratio: 1/0.65;
   border-radius: 5px;
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .companyCard02 a > div .left .img-box {
+    aspect-ratio: 1/0.55;
+  }
 }
 .companyCard02 a > div .right {
   flex-grow: 1;
@@ -1156,7 +1228,23 @@ component
   gap: 8px;
   margin-bottom: 2rem;
 }
-.companyCard02 a > div .right .cate span {
+@media screen and (max-width: 768px) {
+  .companyCard02 a > div .right .cate {
+    margin-bottom: 1.5rem;
+  }
+}
+.companyCard02 a > div .right .cate div {
+  max-width: 42rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+@media screen and (max-width: 768px) {
+  .companyCard02 a > div .right .cate div {
+    row-gap: 5px;
+  }
+}
+.companyCard02 a > div .right .cate div span {
   font-size: 1.2rem;
   border-radius: 100vmax;
   padding: 3px 5px 2px;
@@ -1178,6 +1266,13 @@ component
   line-height: 1;
   margin-bottom: 1.5rem;
 }
+@media screen and (max-width: 768px) {
+  .companyCard02 a > div .right .name {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+}
 .companyCard02 a > div .right .name .logo {
   display: block;
   width: 3.5rem;
@@ -1187,6 +1282,16 @@ component
   overflow-wrap: break-word;
   line-height: 1.5;
   margin-bottom: 2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+@media screen and (max-width: 768px) {
+  .companyCard02 a > div .right .txt {
+    margin-bottom: 1rem;
+  }
 }
 .companyCard02 a > div .right .region {
   display: flex;
@@ -1208,8 +1313,16 @@ component
 }
 .breadcrumbs nav ul {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 3.5rem;
+  row-gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .breadcrumbs nav ul {
+    gap: 2.5rem;
+    row-gap: 0.7rem;
+  }
 }
 .breadcrumbs nav ul li,
 .breadcrumbs nav ul a {
@@ -1229,6 +1342,19 @@ component
   transform: translateY(-50%);
   right: -2rem;
 }
+@media screen and (max-width: 768px) {
+  .breadcrumbs nav ul li:not(:last-child)::after {
+    right: -1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .breadcrumbs nav ul li:not(:has(a)) {
+    max-width: 8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 
 /*************************************************
 header
@@ -1244,7 +1370,7 @@ header .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2.7777777778vw 1rem 1.0416666667vw;
+  padding: 1.5rem 2.7777777778vw 1.5rem 1.3888888889vw;
 }
 @media screen and (max-width: 768px) {
   header .header-inner {
@@ -1252,17 +1378,16 @@ header .header-inner {
   }
 }
 header .header-inner .logo {
-  width: 20rem;
-  aspect-ratio: 1/0.25;
-  background-color: #333;
+  width: 22rem;
 }
 @media screen and (max-width: 768px) {
   header .header-inner .logo {
-    width: 12rem;
+    width: 15rem;
   }
 }
 header .header-inner .serch {
-  width: 60rem;
+  width: 65rem;
+  margin-right: 8rem;
 }
 @media screen and (max-width: 768px) {
   header .header-inner .serch {
@@ -1496,6 +1621,56 @@ header .header-inner .header-acount .acount-wrapper .user a img {
     transform: rotate(-45deg);
   }
 }
+.drawer-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100svh;
+  padding-top: 12rem;
+  transform: translateX(100%);
+  background-color: #f7f5f3;
+  overflow: scroll;
+  z-index: 998;
+  transition: all 0.3s;
+}
+.drawer-menu.is-drawermenu-open {
+  transform: translateX(0);
+}
+.drawer-menu .drawer-menu_inner {
+  width: 80%;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.drawer-menu .nav_list {
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+.drawer-menu .nav_list:not(:has(nav)) a {
+  font-weight: 600;
+}
+.drawer-menu .nav_list p {
+  position: relative;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.drawer-menu .nav_list p::before {
+  content: "";
+  width: 10px;
+  aspect-ratio: 1/1;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -2rem;
+}
+.drawer-menu .nav_list li a {
+  font-size: 1.4rem;
+}
+.drawer-menu .btn-wrap {
+  margin-bottom: 1rem;
+}
+
 /*************************************************
 footer
 *************************************************/
@@ -1505,30 +1680,38 @@ footer {
   background-color: #fff;
   padding-bottom: 2rem;
 }
+@media screen and (max-width: 768px) {
+  footer {
+    padding-bottom: 1rem;
+  }
+}
 footer p:has(small) {
   text-align: center;
 }
 footer .footer-inner {
   display: flex;
   justify-content: space-between;
-  padding: 8rem 2.7777777778vw 2rem 4rem;
+  padding: 8rem 4.1666666667vw 2rem 20.8333333333vw;
 }
 @media screen and (max-width: 768px) {
   footer .footer-inner {
+    flex-direction: column;
     width: 90%;
     margin: 0 auto;
     padding: 4rem 0;
   }
 }
 footer .footer-inner .footerNav-wrap {
-  width: 75%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 4rem;
 }
 @media screen and (max-width: 768px) {
   footer .footer-inner .footerNav-wrap {
-    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 0;
   }
 }
 footer .footer-inner .footerNav-wrap .fnav_list {
@@ -1538,30 +1721,46 @@ footer .footer-inner .footerNav-wrap .fnav_list:not(:has(nav)) a {
   font-weight: 600;
 }
 footer .footer-inner .footerNav-wrap .fnav_list p {
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
+@media screen and (max-width: 768px) {
+  footer .footer-inner .footerNav-wrap .fnav_list p {
+    font-size: 1.2rem;
+  }
+}
 footer .footer-inner .footerNav-wrap .fnav_list li a {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+}
+@media screen and (max-width: 768px) {
+  footer .footer-inner .footerNav-wrap .fnav_list li a {
+    font-size: 1.2rem;
+  }
 }
 footer .footer-inner .logo {
   width: 22rem;
-  height: 100%;
-  aspect-ratio: 1/0.17;
-  background-color: #333;
+}
+@media screen and (max-width: 768px) {
+  footer .footer-inner .logo {
+    margin-bottom: 3rem;
+  }
 }
 
 /*************************************************
 sidebar
 *************************************************/
 aside {
-  width: 15%;
+  width: 17%;
   max-width: 300px;
   flex-shrink: 0;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
   padding: 2rem;
   background-color: #fff;
   z-index: 0;
+  position: fixed;
+  height: 100vh;
+  z-index: 998;
 }
 @media screen and (max-width: 768px) {
   aside {
@@ -1582,7 +1781,7 @@ aside .snav_list:not(:has(nav)) a {
 aside .snav_list p {
   position: relative;
   font-weight: 600;
-  margin-bottom: 0.3rem;
+  margin-bottom: 5px;
 }
 aside .snav_list p::before {
   content: "";
@@ -1594,6 +1793,9 @@ aside .snav_list p::before {
   transform: translateY(-50%);
   left: -2rem;
 }
+aside .snav_list li {
+  margin-bottom: 5px;
+}
 aside .snav_list li a {
   font-size: 1.4rem;
 }
@@ -1604,15 +1806,16 @@ aside .btn-wrap {
   margin-bottom: 1.2rem;
 }
 aside.snav_maker-buyer {
-  width: 25%;
-  max-width: 32rem;
+  width: auto;
+  max-width: none;
   padding-top: 0;
   padding-right: 0;
-  padding-left: 4.9305555556vw;
+  padding-left: 4.1666666667vw;
   background-color: transparent;
   box-shadow: none;
 }
 aside.snav_maker-buyer > div {
+  width: 25rem;
   background-color: #fff;
   padding: 0 1.5rem 2rem;
   border-radius: 5px;
@@ -1640,24 +1843,48 @@ aside.snav_maker-buyer nav ul li img {
   width: 15px;
 }
 
+.content_maker-buyer aside {
+  position: static;
+  height: auto;
+  padding-bottom: 8rem;
+}
+
 /*************************************************
 layout
 *************************************************/
 .contents-wrap {
   display: flex;
-  padding-top: 7.2rem;
+  padding-top: 6.8rem;
 }
 @media screen and (max-width: 768px) {
   .contents-wrap {
-    padding-top: 6.5rem;
+    padding-top: 6rem;
   }
 }
 .contents-wrap:has(aside) .contents {
   flex: 1;
   min-width: 0;
+  margin-left: 17%;
+}
+@media screen and (max-width: 768px) {
+  .contents-wrap:has(aside) .contents {
+    margin-left: 0;
+  }
+}
+.contents-wrap:not(:has(.breadcrumbs)) .content {
+  padding-top: 1rem;
+}
+.contents-wrap.content_maker-buyer {
+  max-width: 155rem;
+}
+.contents-wrap.content_maker-buyer:has(aside) .contents {
+  margin-left: 0;
 }
 .contents-wrap.content_maker-buyer {
   padding-top: 4rem;
+}
+.contents-wrap.content_mypage {
+  padding-top: 6.8rem;
 }
 
 .swiper {
@@ -1692,8 +1919,8 @@ layout
 }
 @media screen and (max-width: 768px) {
   .flex-column04 {
-    gap: 15px;
-    row-gap: 15px;
+    gap: 10px;
+    row-gap: 10px;
   }
 }
 .flex-column04 > * {
@@ -1701,7 +1928,7 @@ layout
 }
 @media screen and (max-width: 768px) {
   .flex-column04 > * {
-    width: calc(50% - 7.5px);
+    width: calc(50% - 5px);
   }
 }
 
@@ -1933,9 +2160,27 @@ archive
 #archiveBuyer .buyer-list_wrap {
   margin-bottom: 10rem;
 }
+@media screen and (max-width: 768px) {
+  #archiveProducts .products_wrap,
+  #archiveProducts .maker-list_wrap,
+  #archiveProducts .buyer-list_wrap,
+  #archiveMaker .products_wrap,
+  #archiveMaker .maker-list_wrap,
+  #archiveMaker .buyer-list_wrap,
+  #archiveBuyer .products_wrap,
+  #archiveBuyer .maker-list_wrap,
+  #archiveBuyer .buyer-list_wrap {
+    margin-bottom: 6rem;
+  }
+}
 
 .filter_wrap {
   margin-bottom: 10rem;
+}
+@media screen and (max-width: 768px) {
+  .filter_wrap {
+    margin-bottom: 6rem;
+  }
 }
 .filter_wrap form > div {
   background-color: #fff;
@@ -1943,14 +2188,23 @@ archive
   padding: 30px 100px;
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .filter_wrap form > div {
+    padding: 30px 15px 15px;
+  }
+}
 .filter_wrap form .btn {
   max-width: 25rem;
   margin: 0 auto;
 }
 .filter_wrap fieldset {
   margin-bottom: 4rem;
-  padding-bottom: 2rem;
   border-bottom: 1.5px solid #ccc;
+}
+@media screen and (max-width: 768px) {
+  .filter_wrap fieldset {
+    margin-bottom: 3rem;
+  }
 }
 .filter_wrap fieldset:last-of-type {
   border-bottom: none;
@@ -1961,11 +2215,21 @@ archive
   position: relative;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+  .filter_wrap fieldset .ttl {
+    padding-bottom: 3rem;
+  }
+}
 .filter_wrap fieldset .ttl h3 {
   display: inline-block;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1;
+}
+@media screen and (max-width: 768px) {
+  .filter_wrap fieldset .ttl h3 {
+    font-size: 1.6rem;
+  }
 }
 .filter_wrap fieldset .ttl .clear {
   position: absolute;
@@ -1975,26 +2239,33 @@ archive
   color: #d93923;
   text-decoration: underline;
 }
-.filter_wrap fieldset .categories {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media screen and (max-width: 768px) {
+  .filter_wrap fieldset .ttl .clear {
+    right: auto;
+    left: 0;
+    font-size: 1.2rem;
+  }
 }
-.filter_wrap fieldset .categories.flex-column05 {
-  row-gap: 20px;
+.filter_wrap fieldset .sp_accordion-trigger {
+  position: relative;
 }
-.filter_wrap fieldset .category-group ul {
-  padding-left: 1.5rem;
+@media screen and (max-width: 768px) {
+  .filter_wrap fieldset .sp_accordion-trigger::before {
+    content: "";
+    width: 14px;
+    aspect-ratio: 1/1;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    transition: all 0.3s;
+  }
 }
-.filter_wrap fieldset .category-group > label {
-  font-weight: 600;
+.filter_wrap fieldset .sp_accordion-trigger.open::before {
+  rotate: 180deg;
 }
-.filter_wrap fieldset .category-group label {
-  display: block;
-  margin-bottom: 1rem;
-}
-.filter_wrap fieldset .category-group.area label {
-  font-weight: 600;
+.filter_wrap fieldset .sp_accordion-hide {
+  margin-bottom: 2rem;
 }
 .filter_wrap fieldset .search-form {
   max-width: 65rem;
@@ -2002,8 +2273,83 @@ archive
   padding: 1.5rem 2.5rem;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .filter_wrap fieldset .search-form {
+    padding: 1.5rem;
+  }
+}
 .filter_wrap fieldset .search-form input {
   font-size: 1.6rem;
+}
+@media screen and (max-width: 768px) {
+  .filter_wrap fieldset .search-form input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .filter_wrap fieldset .search-form input::placeholder {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #archiveProducts .filter_wrap fieldset .ttl .clear {
+    width: 200%;
+  }
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .categories {
+    align-items: start;
+  }
+}
+.categories.flex-column05 {
+  row-gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .categories.flex-column05 {
+    row-gap: 10px;
+  }
+}
+
+.category-group ul {
+  padding-left: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .category-group ul {
+    padding-left: 1rem;
+  }
+}
+.category-group > label {
+  font-weight: 600;
+}
+.category-group label {
+  display: block;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .category-group label {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    line-height: 1.4;
+  }
+}
+@media screen and (max-width: 768px) {
+  .category-group label input {
+    margin-top: 2px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .category-group.area .flex-column05 {
+    row-gap: 5px;
+  }
+}
+.category-group.area label {
+  font-weight: 600;
 }
 
 /*************************************************
@@ -2014,12 +2360,22 @@ single
   font-weight: 800;
   margin-bottom: 2.5rem;
 }
+@media screen and (max-width: 768px) {
+  #singleProduct h2 {
+    font-size: 2rem;
+  }
+}
 #singleProduct .inner {
   padding: 2rem 0;
 }
 #singleProduct .product-content {
   padding-bottom: 8rem;
   border-bottom: 1px solid #333;
+}
+@media screen and (max-width: 768px) {
+  #singleProduct .product-content {
+    padding-bottom: 6rem;
+  }
 }
 #singleProduct .products_wrap {
   margin-bottom: 8rem;
@@ -2030,14 +2386,31 @@ single
   display: flex;
   margin-bottom: 6rem;
 }
+@media screen and (max-width: 768px) {
+  .product-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 .product-content .img-content {
   width: 50%;
   flex-shrink: 0;
   padding-right: 4rem;
 }
+@media screen and (max-width: 768px) {
+  .product-content .img-content {
+    width: 100%;
+    padding-right: 0;
+  }
+}
 .product-content .img-content .img-wrapper .swiper-item {
   overflow: hidden;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .product-content .img-content .img-wrapper .swiper-item {
+    margin-bottom: 1rem;
+  }
 }
 .product-content .img-content .img-wrapper .thumb-list {
   display: flex;
@@ -2055,7 +2428,7 @@ single
 }
 @media screen and (max-width: 768px) {
   .product-content .img-content .img-wrapper .thumb-list .thumb-item {
-    width: calc(50% - 1rem);
+    width: calc(25% - 0.75rem);
   }
 }
 .product-content .img-content .img-wrapper .thumb-list .thumb-link {
@@ -2094,9 +2467,19 @@ single
   border-bottom: 1px solid #ccc;
   margin-bottom: 3rem;
 }
+@media screen and (max-width: 768px) {
+  .product-content .detail-content .name {
+    font-size: 2rem;
+  }
+}
 .product-content .detail-content .download {
   max-width: 32rem;
   margin-bottom: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .product-content .detail-content .download {
+    margin: 0 auto 4rem;
+  }
 }
 .product-content .detail-content .download .btn-wrap {
   margin-bottom: 1.5rem;
@@ -2110,6 +2493,11 @@ single
   padding-left: 4rem;
   font-size: 1.6rem;
 }
+@media screen and (max-width: 768px) {
+  .product-content .detail-content .download .btn-wrap .btn {
+    font-size: 1.5rem;
+  }
+}
 .product-content .detail-content .txt {
   width: 100%;
   overflow-wrap: break-word;
@@ -2120,11 +2508,21 @@ single
   border-radius: 5px;
   padding: 1rem 2rem;
 }
+@media screen and (max-width: 768px) {
+  .product-content .detail-content .custom-fields {
+    padding: 1rem 0.5rem;
+  }
+}
 .product-content .detail-content .custom-fields table {
   table-layout: fixed;
   width: 100%;
   border-spacing: 15px 0;
   border-collapse: separate;
+}
+@media screen and (max-width: 768px) {
+  .product-content .detail-content .custom-fields table {
+    border-spacing: 10px 0;
+  }
 }
 .product-content .detail-content .custom-fields table tr:last-of-type th,
 .product-content .detail-content .custom-fields table tr:last-of-type td {
@@ -2137,6 +2535,11 @@ single
 .product-content .detail-content .custom-fields table th {
   width: 25%;
   border-bottom: 1.5px solid #1a1a1a;
+}
+@media screen and (max-width: 768px) {
+  .product-content .detail-content .custom-fields table th {
+    width: 30%;
+  }
 }
 .product-content .detail-content .custom-fields table td {
   font-weight: 600;
@@ -2159,11 +2562,23 @@ single
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .single-head-content .head-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 .single-head-content .head-content .company {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .single-head-content .head-content .company {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 .single-head-content .head-content .company .logo {
   width: 25rem;
@@ -2172,6 +2587,11 @@ single
   overflow: hidden;
   background-color: #333;
   padding: 1.5rem 0;
+}
+@media screen and (max-width: 768px) {
+  .single-head-content .head-content .company .logo {
+    width: 20rem;
+  }
 }
 .single-head-content .head-content .company .logo.obj-fit img {
   -o-object-fit: contain;
@@ -2201,6 +2621,11 @@ single
   font-weight: 700;
   margin-bottom: 15px;
 }
+@media screen and (max-width: 768px) {
+  .single-head-content .head-content .company .ttl .name {
+    font-size: 2rem;
+  }
+}
 .single-head-content .head-content .company .ttl .region {
   display: flex;
   justify-content: flex-start;
@@ -2223,49 +2648,98 @@ single
   flex-direction: column;
   gap: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .single-head-content .head-content .btn-area {
+    gap: 0.7rem;
+  }
+}
 .single-head-content .head-content .btn-area .btn-wrap {
   width: 20rem;
 }
 
 #singleMaker,
-#singleBuyer {
+#singleBuyer,
+#pageMypage {
   margin-bottom: 4rem;
 }
 #singleMaker h2,
-#singleBuyer h2 {
+#singleBuyer h2,
+#pageMypage h2 {
   font-size: 2.4rem;
   font-weight: 800;
   margin-bottom: 2.5rem;
 }
+@media screen and (max-width: 768px) {
+  #singleMaker h2,
+  #singleBuyer h2,
+  #pageMypage h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
 #singleMaker .maker_buyer-content .img-wrap,
-#singleBuyer .maker_buyer-content .img-wrap {
+#singleMaker .profile-content .img-wrap,
+#singleBuyer .maker_buyer-content .img-wrap,
+#singleBuyer .profile-content .img-wrap,
+#pageMypage .maker_buyer-content .img-wrap,
+#pageMypage .profile-content .img-wrap {
   margin-bottom: 2rem;
 }
 #singleMaker .maker_buyer-content .img-wrap .img-box,
-#singleBuyer .maker_buyer-content .img-wrap .img-box {
+#singleMaker .profile-content .img-wrap .img-box,
+#singleBuyer .maker_buyer-content .img-wrap .img-box,
+#singleBuyer .profile-content .img-wrap .img-box,
+#pageMypage .maker_buyer-content .img-wrap .img-box,
+#pageMypage .profile-content .img-wrap .img-box {
   aspect-ratio: 1/0.7;
   border-radius: 5px;
   overflow: hidden;
 }
 #singleMaker .maker_buyer-content .information h3,
-#singleBuyer .maker_buyer-content .information h3 {
+#singleMaker .profile-content .information h3,
+#singleBuyer .maker_buyer-content .information h3,
+#singleBuyer .profile-content .information h3,
+#pageMypage .maker_buyer-content .information h3,
+#pageMypage .profile-content .information h3 {
   font-weight: 700;
 }
 #singleMaker .maker_buyer-content .box,
-#singleBuyer .maker_buyer-content .box {
+#singleMaker .profile-content .box,
+#singleBuyer .maker_buyer-content .box,
+#singleBuyer .profile-content .box,
+#pageMypage .maker_buyer-content .box,
+#pageMypage .profile-content .box {
   background-color: #fff;
   padding: 3rem 3rem;
   border-radius: 5px;
   margin-bottom: 4rem;
   margin-top: 4rem;
 }
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box,
+  #singleMaker .profile-content .box,
+  #singleBuyer .maker_buyer-content .box,
+  #singleBuyer .profile-content .box,
+  #pageMypage .maker_buyer-content .box,
+  #pageMypage .profile-content .box {
+    padding: 2rem;
+  }
+}
 #singleMaker .maker_buyer-content .box > div,
-#singleBuyer .maker_buyer-content .box > div {
+#singleMaker .profile-content .box > div,
+#singleBuyer .maker_buyer-content .box > div,
+#singleBuyer .profile-content .box > div,
+#pageMypage .maker_buyer-content .box > div,
+#pageMypage .profile-content .box > div {
   padding-top: 10rem;
   margin-top: -10rem;
 }
 #singleMaker .maker_buyer-content .box table,
-#singleBuyer .maker_buyer-content .box table {
+#singleMaker .profile-content .box table,
+#singleBuyer .maker_buyer-content .box table,
+#singleBuyer .profile-content .box table,
+#pageMypage .maker_buyer-content .box table,
+#pageMypage .profile-content .box table {
   table-layout: fixed;
   width: 100%;
   border-spacing: 0 10px;
@@ -2273,125 +2747,359 @@ single
 }
 #singleMaker .maker_buyer-content .box table th,
 #singleMaker .maker_buyer-content .box table td,
+#singleMaker .profile-content .box table th,
+#singleMaker .profile-content .box table td,
 #singleBuyer .maker_buyer-content .box table th,
-#singleBuyer .maker_buyer-content .box table td {
+#singleBuyer .maker_buyer-content .box table td,
+#singleBuyer .profile-content .box table th,
+#singleBuyer .profile-content .box table td,
+#pageMypage .maker_buyer-content .box table th,
+#pageMypage .maker_buyer-content .box table td,
+#pageMypage .profile-content .box table th,
+#pageMypage .profile-content .box table td {
   padding: 1.5rem 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box table th,
+  #singleMaker .maker_buyer-content .box table td,
+  #singleMaker .profile-content .box table th,
+  #singleMaker .profile-content .box table td,
+  #singleBuyer .maker_buyer-content .box table th,
+  #singleBuyer .maker_buyer-content .box table td,
+  #singleBuyer .profile-content .box table th,
+  #singleBuyer .profile-content .box table td,
+  #pageMypage .maker_buyer-content .box table th,
+  #pageMypage .maker_buyer-content .box table td,
+  #pageMypage .profile-content .box table th,
+  #pageMypage .profile-content .box table td {
+    display: block;
+    padding: 1rem 1.5rem;
+  }
 }
 #singleMaker .maker_buyer-content .box table th,
-#singleBuyer .maker_buyer-content .box table th {
+#singleMaker .profile-content .box table th,
+#singleBuyer .maker_buyer-content .box table th,
+#singleBuyer .profile-content .box table th,
+#pageMypage .maker_buyer-content .box table th,
+#pageMypage .profile-content .box table th {
   width: 25%;
   background-color: #f1f1f1;
-  padding: 1.5rem 2.5rem;
   border-radius: 5px;
 }
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box table th,
+  #singleMaker .profile-content .box table th,
+  #singleBuyer .maker_buyer-content .box table th,
+  #singleBuyer .profile-content .box table th,
+  #pageMypage .maker_buyer-content .box table th,
+  #pageMypage .profile-content .box table th {
+    width: 100%;
+  }
+}
 #singleMaker .maker_buyer-content .box.wanted .cate,
-#singleBuyer .maker_buyer-content .box.wanted .cate {
+#singleMaker .profile-content .box.wanted .cate,
+#singleBuyer .maker_buyer-content .box.wanted .cate,
+#singleBuyer .profile-content .box.wanted .cate,
+#pageMypage .maker_buyer-content .box.wanted .cate,
+#pageMypage .profile-content .box.wanted .cate {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.wanted .cate,
+  #singleMaker .profile-content .box.wanted .cate,
+  #singleBuyer .maker_buyer-content .box.wanted .cate,
+  #singleBuyer .profile-content .box.wanted .cate,
+  #pageMypage .maker_buyer-content .box.wanted .cate,
+  #pageMypage .profile-content .box.wanted .cate {
+    gap: 10px;
+  }
+}
 #singleMaker .maker_buyer-content .box.wanted .cate span,
-#singleBuyer .maker_buyer-content .box.wanted .cate span {
+#singleMaker .profile-content .box.wanted .cate span,
+#singleBuyer .maker_buyer-content .box.wanted .cate span,
+#singleBuyer .profile-content .box.wanted .cate span,
+#pageMypage .maker_buyer-content .box.wanted .cate span,
+#pageMypage .profile-content .box.wanted .cate span {
   font-size: 1.4rem;
   font-weight: 600;
   border-radius: 100vmax;
   padding: 3px 8px 3px;
 }
 #singleMaker .maker_buyer-content .box.wanted .cate .parent,
-#singleBuyer .maker_buyer-content .box.wanted .cate .parent {
+#singleMaker .profile-content .box.wanted .cate .parent,
+#singleBuyer .maker_buyer-content .box.wanted .cate .parent,
+#singleBuyer .profile-content .box.wanted .cate .parent,
+#pageMypage .maker_buyer-content .box.wanted .cate .parent,
+#pageMypage .profile-content .box.wanted .cate .parent {
   color: #fff;
   background-color: #333;
   border: 1px solid #333;
 }
 #singleMaker .maker_buyer-content .box.wanted .cate .child,
-#singleBuyer .maker_buyer-content .box.wanted .cate .child {
+#singleMaker .profile-content .box.wanted .cate .child,
+#singleBuyer .maker_buyer-content .box.wanted .cate .child,
+#singleBuyer .profile-content .box.wanted .cate .child,
+#pageMypage .maker_buyer-content .box.wanted .cate .child,
+#pageMypage .profile-content .box.wanted .cate .child {
   border: 1px solid #333;
 }
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.send-message h2,
+  #singleMaker .profile-content .box.send-message h2,
+  #singleBuyer .maker_buyer-content .box.send-message h2,
+  #singleBuyer .profile-content .box.send-message h2,
+  #pageMypage .maker_buyer-content .box.send-message h2,
+  #pageMypage .profile-content .box.send-message h2 {
+    font-size: 1.8rem;
+  }
+}
 #singleMaker .maker_buyer-content .box.send-message table,
-#singleBuyer .maker_buyer-content .box.send-message table {
+#singleMaker .profile-content .box.send-message table,
+#singleBuyer .maker_buyer-content .box.send-message table,
+#singleBuyer .profile-content .box.send-message table,
+#pageMypage .maker_buyer-content .box.send-message table,
+#pageMypage .profile-content .box.send-message table {
   border-spacing: 10px 10px;
+}
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.send-message table,
+  #singleMaker .profile-content .box.send-message table,
+  #singleBuyer .maker_buyer-content .box.send-message table,
+  #singleBuyer .profile-content .box.send-message table,
+  #pageMypage .maker_buyer-content .box.send-message table,
+  #pageMypage .profile-content .box.send-message table {
+    border-collapse: collapse;
+  }
+}
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.send-message table tr:first-of-type th,
+  #singleMaker .maker_buyer-content .box.send-message table tr:first-of-type td,
+  #singleMaker .profile-content .box.send-message table tr:first-of-type th,
+  #singleMaker .profile-content .box.send-message table tr:first-of-type td,
+  #singleBuyer .maker_buyer-content .box.send-message table tr:first-of-type th,
+  #singleBuyer .maker_buyer-content .box.send-message table tr:first-of-type td,
+  #singleBuyer .profile-content .box.send-message table tr:first-of-type th,
+  #singleBuyer .profile-content .box.send-message table tr:first-of-type td,
+  #pageMypage .maker_buyer-content .box.send-message table tr:first-of-type th,
+  #pageMypage .maker_buyer-content .box.send-message table tr:first-of-type td,
+  #pageMypage .profile-content .box.send-message table tr:first-of-type th,
+  #pageMypage .profile-content .box.send-message table tr:first-of-type td {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.send-message table tr:first-of-type th,
+  #singleMaker .profile-content .box.send-message table tr:first-of-type th,
+  #singleBuyer .maker_buyer-content .box.send-message table tr:first-of-type th,
+  #singleBuyer .profile-content .box.send-message table tr:first-of-type th,
+  #pageMypage .maker_buyer-content .box.send-message table tr:first-of-type th,
+  #pageMypage .profile-content .box.send-message table tr:first-of-type th {
+    width: 15%;
+  }
 }
 #singleMaker .maker_buyer-content .box.send-message table th,
 #singleMaker .maker_buyer-content .box.send-message table td,
+#singleMaker .profile-content .box.send-message table th,
+#singleMaker .profile-content .box.send-message table td,
 #singleBuyer .maker_buyer-content .box.send-message table th,
-#singleBuyer .maker_buyer-content .box.send-message table td {
+#singleBuyer .maker_buyer-content .box.send-message table td,
+#singleBuyer .profile-content .box.send-message table th,
+#singleBuyer .profile-content .box.send-message table td,
+#pageMypage .maker_buyer-content .box.send-message table th,
+#pageMypage .maker_buyer-content .box.send-message table td,
+#pageMypage .profile-content .box.send-message table th,
+#pageMypage .profile-content .box.send-message table td {
   padding: 0;
 }
 #singleMaker .maker_buyer-content .box.send-message table th,
-#singleBuyer .maker_buyer-content .box.send-message table th {
+#singleMaker .profile-content .box.send-message table th,
+#singleBuyer .maker_buyer-content .box.send-message table th,
+#singleBuyer .profile-content .box.send-message table th,
+#pageMypage .maker_buyer-content .box.send-message table th,
+#pageMypage .profile-content .box.send-message table th {
   width: 12%;
   background-color: transparent;
   padding: 0;
   text-align: right;
 }
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.send-message table th,
+  #singleMaker .profile-content .box.send-message table th,
+  #singleBuyer .maker_buyer-content .box.send-message table th,
+  #singleBuyer .profile-content .box.send-message table th,
+  #pageMypage .maker_buyer-content .box.send-message table th,
+  #pageMypage .profile-content .box.send-message table th {
+    width: 100%;
+    text-align: left;
+  }
+}
 #singleMaker .maker_buyer-content .box.send-message table td textarea,
-#singleBuyer .maker_buyer-content .box.send-message table td textarea {
+#singleMaker .profile-content .box.send-message table td textarea,
+#singleBuyer .maker_buyer-content .box.send-message table td textarea,
+#singleBuyer .profile-content .box.send-message table td textarea,
+#pageMypage .maker_buyer-content .box.send-message table td textarea,
+#pageMypage .profile-content .box.send-message table td textarea {
   width: 100%;
   height: 20rem;
   padding: 1rem 2rem;
   background-color: #f1f1f1;
 }
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.send-message table td textarea,
+  #singleMaker .profile-content .box.send-message table td textarea,
+  #singleBuyer .maker_buyer-content .box.send-message table td textarea,
+  #singleBuyer .profile-content .box.send-message table td textarea,
+  #pageMypage .maker_buyer-content .box.send-message table td textarea,
+  #pageMypage .profile-content .box.send-message table td textarea {
+    margin-bottom: 2rem;
+  }
+}
 #singleMaker .maker_buyer-content .box.send-message table td .btn-wrap,
-#singleBuyer .maker_buyer-content .box.send-message table td .btn-wrap {
+#singleMaker .profile-content .box.send-message table td .btn-wrap,
+#singleBuyer .maker_buyer-content .box.send-message table td .btn-wrap,
+#singleBuyer .profile-content .box.send-message table td .btn-wrap,
+#pageMypage .maker_buyer-content .box.send-message table td .btn-wrap,
+#pageMypage .profile-content .box.send-message table td .btn-wrap {
   width: 20rem;
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.send-message table td .btn-wrap,
+  #singleMaker .profile-content .box.send-message table td .btn-wrap,
+  #singleBuyer .maker_buyer-content .box.send-message table td .btn-wrap,
+  #singleBuyer .profile-content .box.send-message table td .btn-wrap,
+  #pageMypage .maker_buyer-content .box.send-message table td .btn-wrap,
+  #pageMypage .profile-content .box.send-message table td .btn-wrap {
+    width: 100%;
+  }
+}
 #singleMaker .maker_buyer-content .box.send-message table td .btn-wrap .btn,
-#singleBuyer .maker_buyer-content .box.send-message table td .btn-wrap .btn {
+#singleMaker .profile-content .box.send-message table td .btn-wrap .btn,
+#singleBuyer .maker_buyer-content .box.send-message table td .btn-wrap .btn,
+#singleBuyer .profile-content .box.send-message table td .btn-wrap .btn,
+#pageMypage .maker_buyer-content .box.send-message table td .btn-wrap .btn,
+#pageMypage .profile-content .box.send-message table td .btn-wrap .btn {
   border-radius: 100vmax !important;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.send-message table td .btn-wrap .btn,
+  #singleMaker .profile-content .box.send-message table td .btn-wrap .btn,
+  #singleBuyer .maker_buyer-content .box.send-message table td .btn-wrap .btn,
+  #singleBuyer .profile-content .box.send-message table td .btn-wrap .btn,
+  #pageMypage .maker_buyer-content .box.send-message table td .btn-wrap .btn,
+  #pageMypage .profile-content .box.send-message table td .btn-wrap .btn {
+    aspect-ratio: 1/0.16;
+  }
+}
+#singleMaker .maker_buyer-content .box.send-message table td label,
+#singleMaker .profile-content .box.send-message table td label,
+#singleBuyer .maker_buyer-content .box.send-message table td label,
+#singleBuyer .profile-content .box.send-message table td label,
+#pageMypage .maker_buyer-content .box.send-message table td label,
+#pageMypage .profile-content .box.send-message table td label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  line-height: 1.4;
+}
+#singleMaker .maker_buyer-content .box.send-message table td label input,
+#singleMaker .profile-content .box.send-message table td label input,
+#singleBuyer .maker_buyer-content .box.send-message table td label input,
+#singleBuyer .profile-content .box.send-message table td label input,
+#pageMypage .maker_buyer-content .box.send-message table td label input,
+#pageMypage .profile-content .box.send-message table td label input {
+  margin-top: 0.4rem;
+}
+@media screen and (max-width: 768px) {
+  #singleMaker .maker_buyer-content .box.send-message table td label input,
+  #singleMaker .profile-content .box.send-message table td label input,
+  #singleBuyer .maker_buyer-content .box.send-message table td label input,
+  #singleBuyer .profile-content .box.send-message table td label input,
+  #pageMypage .maker_buyer-content .box.send-message table td label input,
+  #pageMypage .profile-content .box.send-message table td label input {
+    margin-top: 0.2rem;
+  }
 }
 
 /*************************************************
 conatct
 *************************************************/
-#pageContact h2 {
+#pageContact h2,
+#pageMypage h2 {
   font-size: 2.4rem;
   font-weight: 800;
   margin-bottom: 2.5rem;
 }
-#pageContact .inner {
+#pageContact .inner,
+#pageMypage .inner {
   padding: 2rem 0;
 }
-#pageContact .contact_wrap {
+#pageContact .contact_wrap,
+#pageMypage .contact_wrap {
   margin-bottom: 8rem;
 }
-#pageContact .contact_wrap table {
+
+#pageContact table {
   table-layout: fixed;
   width: 100%;
   margin-bottom: 2rem;
 }
-#pageContact .contact_wrap table tr:last-of-type th {
+#pageContact table tr:last-of-type th {
   vertical-align: baseline;
 }
-#pageContact .contact_wrap table tr th,
-#pageContact .contact_wrap table tr td {
+#pageContact table tr th,
+#pageContact table tr td {
   padding: 2rem 0;
 }
-#pageContact .contact_wrap table tr th {
+@media screen and (max-width: 768px) {
+  #pageContact table tr th,
+  #pageContact table tr td {
+    display: block;
+    padding: 0.5rem 0;
+  }
+}
+#pageContact table tr th {
   width: 20%;
   vertical-align: middle;
 }
-#pageContact .contact_wrap table tr td input,
-#pageContact .contact_wrap table tr td textarea {
+@media screen and (max-width: 768px) {
+  #pageContact table tr th {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #pageContact table tr td {
+    padding-bottom: 1.5rem;
+  }
+}
+#pageContact table tr td input,
+#pageContact table tr td textarea {
   width: 100%;
   background-color: #fff;
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 1rem 1.5rem;
 }
-#pageContact .contact_wrap table tr td textarea {
+#pageContact table tr td textarea {
   aspect-ratio: 1/0.3;
 }
-#pageContact .contact_wrap .btn_wrap {
+@media screen and (max-width: 768px) {
+  #pageContact table tr td textarea {
+    aspect-ratio: 1/0.5;
+  }
+}
+#pageContact .btn_wrap {
   width: 18rem;
   text-align: center;
   margin: 0 auto 2rem;
 }
-#pageContact .contact_wrap .btn_wrap .btn {
+#pageContact .btn_wrap .btn {
   border-radius: 100vmax;
 }
-#pageContact .contact_wrap .policy {
+#pageContact .policy {
   text-align: center;
 }

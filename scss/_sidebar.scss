@@ -4,13 +4,16 @@
 sidebar
 *************************************************/
 aside {
-  width: 15%;
+  width: 17%;
   max-width: 300px;
   flex-shrink: 0;
   box-shadow: v.$shadow01;
   padding: 2rem;
   background-color: #fff;
   z-index: 0;
+  position: fixed;
+  height: 100vh;
+  z-index: 998;
   @include c.mq() {
     display: none;
   }
@@ -29,7 +32,7 @@ aside {
     p {
       position: relative;
       font-weight: 600;
-      margin-bottom: 0.3rem;
+      margin-bottom: 5px;
       &::before {
         content: "";
         width: 10px;
@@ -41,6 +44,7 @@ aside {
       }
     }
     li {
+      margin-bottom: 5px;
       a {
         font-size: 1.4rem;
       }
@@ -53,14 +57,17 @@ aside {
     margin-bottom: 1.2rem;
   }
   &.snav_maker-buyer {
-    width: 25%;
-    max-width: 32rem;
+    // width: 28rem;
+    // max-width: 32rem;
+    width: auto;
+    max-width: none;
     padding-top: 0;
     padding-right: 0;
-    padding-left: v.pxtovw(71);
+    padding-left: v.pxtovw(60);
     background-color: transparent;
     box-shadow: none;
     > div {
+      width: 25rem;
       background-color: #fff;
       padding: 0 1.5rem 2rem;
       border-radius: 5px;
@@ -89,5 +96,12 @@ aside {
         }
       }
     }
+  }
+}
+.content_maker-buyer {
+  aside {
+    position: static;
+    height: auto;
+    padding-bottom: 8rem;
   }
 }
