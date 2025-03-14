@@ -17,13 +17,18 @@ header {
     }
     .logo {
       width: 22rem;
+      width: clamp(18rem, v.pxtovw(220), 22rem);
       @include c.mq() {
         width: 15rem;
       }
     }
     .serch {
-      width: 65rem;
-      margin-right: 8rem;
+      width: clamp(50rem, v.pxtovw(650), 65rem);
+      margin-right: clamp(4rem, v.pxtovw(70), 7rem);
+      @include c.mq(md) {
+        width: 42rem;
+        margin-right: 3rem;
+      }
       @include c.mq() {
         display: none;
       }
@@ -36,6 +41,7 @@ header {
       .acount-wrapper {
         @include c.flex(between, center);
         gap: 4rem;
+        gap: clamp(2rem, v.pxtovw(40), 4rem);
         .mylist {
           position: relative;
           @include c.mq() {

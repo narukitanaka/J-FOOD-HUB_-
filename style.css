@@ -53,9 +53,9 @@ input[type=button]:focus {
   max-width: 1200px;
   margin: 0 auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .inner {
-    width: 80%;
+    width: 87%;
     max-width: 1000px;
   }
 }
@@ -1379,6 +1379,7 @@ header .header-inner {
 }
 header .header-inner .logo {
   width: 22rem;
+  width: clamp(18rem, 15.2777777778vw, 22rem);
 }
 @media screen and (max-width: 768px) {
   header .header-inner .logo {
@@ -1386,8 +1387,14 @@ header .header-inner .logo {
   }
 }
 header .header-inner .serch {
-  width: 65rem;
-  margin-right: 8rem;
+  width: clamp(50rem, 45.1388888889vw, 65rem);
+  margin-right: clamp(4rem, 4.8611111111vw, 7rem);
+}
+@media screen and (max-width: 1023px) {
+  header .header-inner .serch {
+    width: 42rem;
+    margin-right: 3rem;
+  }
 }
 @media screen and (max-width: 768px) {
   header .header-inner .serch {
@@ -1405,6 +1412,7 @@ header .header-inner .header-acount .acount-wrapper {
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
+  gap: clamp(2rem, 2.7777777778vw, 4rem);
 }
 header .header-inner .header-acount .acount-wrapper .mylist {
   position: relative;
@@ -2186,6 +2194,7 @@ archive
   background-color: #fff;
   border-radius: 10px;
   padding: 30px 100px;
+  padding: 30px clamp(20px, 6.9444444444vw, 100px);
   margin-bottom: 2rem;
 }
 @media screen and (max-width: 768px) {
